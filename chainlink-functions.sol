@@ -35,6 +35,7 @@ contract GettingStartedFunctionsConsumer is FunctionsClient {
     string source = "return Functions.encodeString(data.name);";
     string public character;
 
+    // This function is not mandatory, the internal logic of this function can be used in other functions
     function sendRequest(
         uint64 subscriptionId,
         string[] calldata args
@@ -59,6 +60,7 @@ contract GettingStartedFunctionsConsumer is FunctionsClient {
      * @param response The HTTP response data
      * @param err Any errors from the Functions request
      */
+    // this Function is mandatory in the smart contract
     function fulfillRequest(
         bytes32 requestId,
         bytes memory response,
