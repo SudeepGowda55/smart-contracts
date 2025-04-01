@@ -60,7 +60,7 @@ contract GettingStartedFunctionsConsumer is FunctionsClient {
      * @param response The HTTP response data
      * @param err Any errors from the Functions request
      */
-    // this Function is mandatory in the smart contract
+    // this Function is mandatory in the smart contract, this function will be called by the chainlink DON through handleOracleFulfillment function
     function fulfillRequest(
         bytes32 requestId,
         bytes memory response,
